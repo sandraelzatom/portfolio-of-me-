@@ -1,0 +1,50 @@
+// 1. Stars Background Effect
+const canvas = document.getElementById('stars-canvas');
+const ctx = canvas.getContext('2d');
+let stars = [];
+
+function init() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    stars = [];
+    for(let i=0; i<150; i++) {
+        stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            z: Math.random() * canvas.width,
+            o: Math.random()
+        });
+    }
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    stars.forEach(s => {
+        let x = (s.x - canvas.width/2) * (canvas.width/s.z) + canvas.width/2;
+        let y = (s.y - canvas.height/2) * (canvas.width/s.z) + canvas.height/2;
+        let r = 1.5 * (canvas.width/s.z);
+        ctx.globalAlpha = s.o;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI*2);
+        ctx.fill();
+        s.z -= 2;
+        if(s.z <= 0) s.z = canvas.width;
+    });
+    requestAnimationFrame(draw);
+}
+
+// 2. Scroll Reveal Logic
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+window.addEventListener('resize', init);
+init();
+draw();
