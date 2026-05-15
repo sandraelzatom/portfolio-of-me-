@@ -3,66 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandra Elza Thomas | AI Systems Portfolio</title>
+    <title>SYNAPSE // Portfolio Archive</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="universe"></div>
-    <div class="stars"></div>
-    
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
+    <canvas id="stars-canvas"></canvas>
+    <div class="scanline"></div>
 
-    <main class="container">
-        <header>
-            <h1>Sandra Elza Thomas</h1>
-            <p class="tagline">Information Systems | NJIT YWCC Freshman</p>
-            <p class="intro-text">
-                Bridging rigorous <strong>CBSE India</strong> analytical foundations with the future of 
-                <strong>AI Systems</strong> at the Ying Wu College of Computing.
-            </p>
-        </header>
-
-        <div class="grid">
-            <div class="card">
-                <h3>Expertise</h3>
-                <p><strong>AI Systems Analysis:</strong> Evaluating how LLMs integrate into business infrastructure.</p>
-                <p><strong>Data Logic:</strong> Leveraging a strong mathematical background to structure complex datasets.</p>
-            </div>
-
-            <div class="card">
-                <h3>Core Skills</h3>
-                <ul>
-                    <li>• Python & Java Foundational</li>
-                    <li>• Advanced Prompt Engineering</li>
-                    <li>• System Documentation</li>
-                    <li>• Database Management (SQL)</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Interests & Hobbies</h3>
-                <ul>
-                    <li>• Chess Strategy</li>
-                    <li>• Digital Illustration</li>
-                    <li>• Cultural Exchange</li>
-                    <li>• Tech Ethics Blogging</li>
-                </ul>
-            </div>
+    <nav class="nav-glass fixed w-full z-[1000] px-8 py-4 flex justify-between items-center">
+        <div class="text-xs tracking-tighter text-cyan-400 font-bold">NEURAL_ARC v1.0</div>
+        <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold">
+            <a href="#about" class="nav-link">Profile</a>
+            <a href="#history" class="nav-link">The Signal</a>
+            <a href="#hobbies" class="nav-link">Neural Nodes</a>
         </div>
+    </nav>
 
-        <div class="designer-point">
-            <h4>Designer Philosophy</h4>
-            <p class="philosophy-text">
-                "I believe AI should not be a black box. My design goal is to create 'Transparent Systems' 
-                where information flows logically between machine intelligence and human intent."
+    <header class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <div class="reveal">
+            <p class="text-cyan-400 text-xs mb-4 tracking-[0.5em]">INITIALIZING INTERFACE...</p>
+            <h1 class="glitch-header text-6xl md:text-8xl font-black mb-4">SYNAPSE</h1>
+            <p class="text-gray-400 max-w-xl mx-auto border-t border-gray-800 pt-4">
+                Neural Interface Designer & Communication Historian. 
+                Bridging biological intent and digital transmission.
             </p>
         </div>
+        <div class="mt-20 reveal">
+            <div class="mouse-icon"></div>
+        </div>
+    </header>
 
-        <a href="https://github.com/YOUR_GITHUB_USERNAME" class="footer-link">View My GitHub Workflow</a>
-    </main>
+    <section id="about" class="py-32 px-8 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h2 class="section-title text-3xl mb-6">The New Frontier</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    By 2027, the physical interface will be obsolete. My work focuses on <strong>Neural Prototyping</strong>—mapping LLMs to human cognitive intent via non-invasive EEG. I blend the history of communication with the future of AI orchestration.
+                </p>
+                <div class="quote-box p-4 bg-cyan-400/5 text-sm italic">
+                    "Every technological revolution is a communication revolution."
+                </div>
+            </div>
+            <div class="reveal chamber-card p-10 rounded-lg border border-cyan-900">
+                <h3 class="text-cyan-400 text-xs mb-6 uppercase tracking-widest">Core Skillset</h3>
+                <div class="space-y-6">
+                    <div class="skill-bar">
+                        <div class="flex justify-between text-[10px] mb-1"><span>SYNTHETIC RESEARCH</span><span>95%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="flex justify-between text-[10px] mb-1"><span>NEURAL PROTOTYPING</span><span>88%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 88%"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="flex justify-between text-[10px] mb-1"><span>VISUAL SYNTHESIS</span><span>92%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 92%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="history" class="py-32 bg-black/40">
+        <div class="max-w-4xl mx-auto px-8">
+            <h2 class="text-center text-4xl mb-24 font-['Orbitron'] reveal">THE SIGNAL ARCHIVE</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="dot cyan"></div>
+                    <span class="era-tag text-cyan-400">ERA 01: ANCIENT SURFACES</span>
+                    <h3>Cuneiform & Papyrus</h3>
+                    <p>The dawn of data storage. Externalizing human memory onto physical media (clay and reeds) for the first time in history.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="dot purple"></div>
+                    <span class="era-tag text-purple-400">ERA 02: THE PRINTED WORD</span>
+                    <h3>The Gutenberg Shift</h3>
+                    <p>1440: Mechanical mass production of information. Breaking the monopoly of knowledge and enabling mass literacy.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="dot red"></div>
+                    <span class="era-tag text-red-400">ERA 03: ELECTRIC VELOCITY</span>
+                    <h3>Morse & Marconi</h3>
+                    <p>The decoupling of information from transportation. Speed moves from the horse to the electron.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="dot cyan pulse"></div>
+                    <span class="era-tag text-cyan-400">ERA 04: THE NEURAL ERA</span>
+                    <h3>AI Orchestration</h3>
+                    <p>Real-time translation and many-to-many connectivity. The emergence of the Global Brain through fiber and silicon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="py-32 px-8 max-w-6xl mx-auto">
+        <h2 class="text-center text-4xl mb-20 font-['Orbitron'] reveal">NEURAL NODES // HOBBIES</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="reveal hobby-card p-8 text-center">
+                <div class="icon-circle mx-auto mb-4">⌨️</div>
+                <h4 class="font-bold text-white mb-2">Hardware Tinkering</h4>
+                <p class="text-xs text-gray-500 italic">Designing custom mechanical haptics and Arduino sensory feedback loops.</p>
+            </div>
+            <div class="reveal hobby-card p-8 text-center">
+                <div class="icon-circle mx-auto mb-4">🎨</div>
+                <h4 class="font-bold text-white mb-2">Generative Art</h4>
+                <p class="text-xs text-gray-500 italic">Experimenting with Runway Gen-3 to visualize neural data patterns.</p>
+            </div>
+            <div class="reveal hobby-card p-8 text-center">
+                <div class="icon-circle mx-auto mb-4">📚</div>
+                <h4 class="font-bold text-white mb-2">Cognitive Theory</h4>
+                <p class="text-xs text-gray-500 italic">Exploring how biological limitations define our digital user experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center opacity-30">
+        <p class="text-[10px] tracking-[0.5em] uppercase">Session Terminated // 2026 // Neural Arc</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
